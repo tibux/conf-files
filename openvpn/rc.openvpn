@@ -1,0 +1,70 @@
+#! /bin/sh
+
+#################
+## Tib OpenVPN ##
+#################
+
+OPENVPN=/usr/sbin/openvpn
+DIR=/etc/openvpn
+CONFIG=/etc/openvpn/openvpn.conf
+PID=/var/run/openvpn.pid
+
+start_vpn () {
+  echo "Starting Tib OpenVPN..."
+
+  modprobe tun
+
+  # Check to see if it's already started...
+  if [ -e $PID ]
+  then
+    echo "FAILED - Already running (PID file exists)"
+  else
+    $OPENVPN \
+	--writepid /var/run/openvpn.pid \
+	--cd $DIR \
+	--daemon \
+	--config $CONFIG
+# 1> /dev/null 2>&1
+  fi
+  echo "Tib OpenVPN Started"
+}
+
+stop_vpn () {
+  echo "Stoping Tib OpenVPN..."
+  kill `cat $PID` || true
+  rm $PID
+  echo "Tib OpenVPN Stopped"
+}
+
+case "$1" in
+  'start')
+    start_vpn
+  ;;
+  'stop')
+    stop_vpn
+  ;;
+  'restart')
+    if [ -e $PID ]
+    then
+      stop_vpn
+      sleep 1
+      start_vpn
+    else
+      start_vpn
+    fi
+  ;;
+  'state')
+    if [ -e $PID ]
+    then
+      echo "Tib OpenVPN is running"
+    else
+      echo "Tib OpenVPN is not running"
+    fi
+  ;;
+  *)
+    echo "Usage: $0 start|stop|restart|state"
+  ;;
+esac
+
+exit 0
+
