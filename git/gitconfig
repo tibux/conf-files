@@ -1,4 +1,4 @@
 [user]
-	name = Thibaut Notteboom
+	name = tibux
 	email = tib@tibux.org
-	core.excludesfile = $/.gitignore.global
+#	core.excludesfile = $/.gitignore.global
