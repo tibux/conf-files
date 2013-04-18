@@ -39,4 +39,7 @@ bin/bandersnatch -c bandersnatch.conf mirror
 #*/2 * * * * root $HOME_VIRTUALENV/bandersnatch/bin/bandersnatch mirror |& logger -t bandersnatch[mirror]
 ##12 * * * * root $HOME_VIRTUALENV/bandersnatch/bin/bandersnatch update-stats |& logger -t bandersnatch[update-stats]
 
+### LINKS
+# http://www.pypi-mirrors.org/
+# https://pypi.python.org/pypi/bandersnatch
 
