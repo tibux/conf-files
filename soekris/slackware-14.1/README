@@ -1,6 +1,9 @@
 #
 # Soekris
 
+# Befoire reboot
+  rm -f /etc/udev/rules.d/70-persistent-net.rules
+
 # /etc/securetty
 
 ttyS0
@@ -126,4 +129,4 @@ sysstat-9.0.6.1-i486-1
 libnl3-3.2.21-i486-1
 openvpn-2.3.2-i486-1
 lzo-2.03-i486-1
-
+lsscsi-0.27-i486-1
