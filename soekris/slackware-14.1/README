@@ -1,7 +1,9 @@
 #
 # Soekris
 
-# Befoire reboot
+screen /dev/ttyUSB0 19200
+
+# Before reboot
   rm -f /etc/udev/rules.d/70-persistent-net.rules
 
 # /etc/securetty
