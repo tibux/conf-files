@@ -1,0 +1,126 @@
+#
+# Soekris
+
+# /etc/securetty
+
+ttyS0
+
+# /etc/inittab
+
+s1:12345:respawn:/sbin/agetty -L ttyS0 19200 vt100
+
+# /usr/src/linux/.config
+CONFIG_MGEODE_LX=y
+CONFIG NET5501=y
+CONFIG_EXT4_FS=y
+
+  make bzImage
+  cp /usr/src/linux/arch/x86/boot/bzImage /boot/
+
+  make modules
+  make modules_install
+
+# /var/log/packages
+aaa_base-14.1-i486-1
+aaa_elflibs-14.1-i486-3
+aaa_terminfo-5.8-i486-1
+acl-2.2.51-i486-1
+attr-2.4.46-i486-1
+bash-4.2.045-i486-1
+bin-11.1-i486-1
+bzip2-1.0.6-i486-1
+coreutils-8.21-i486-1
+cpio-2.11-i486-2
+cxxlibs-6.0.18-i486-1
+dcron-4.5-i486-4
+devs-2.3.1-noarch-25
+dialog-1.2_20130523-i486-1
+e2fsprogs-1.42.8-i486-2
+elvis-2.2_0-i486-2
+etc-14.1-i486-2
+file-5.14-i486-1
+findutils-4.4.2-i486-1
+floppy-5.5-i486-1
+gawk-4.1.0-i486-2
+glibc-solibs-2.17-i486-7
+glibc-zoneinfo-2013d-noarch-7
+grep-2.14-i486-1
+gzip-1.6-i486-1
+kernel-firmware-20131008git-noarch-1
+kmod-15-i486-1
+less-451-i486-1
+lilo-24.0-i486-4
+logrotate-3.8.6-i486-1
+lvm2-2.02.100-i486-1
+mkinitrd-1.4.8-i486-2
+openssl-solibs-1.0.1e-i486-1
+pkgtools-14.1-noarch-2
+procps-3.2.8-i486-4
+sed-4.2.2-i486-1
+shadow-4.1.5.1-i486-2
+sharutils-4.14-i486-1
+sysklogd-1.5-i486-2
+syslinux-4.06-i486-1
+sysvinit-2.88dsf-i486-3
+sysvinit-scripts-2.0-noarch-17
+tar-1.26-i486-1
+udev-182-i486-7
+usbutils-007-i486-1
+utempter-1.1.5-i486-1
+util-linux-2.21.2-i486-6
+which-2.20-i486-1
+xz-5.0.5-i486-1
+diffutils-3.3-i486-1
+dmidecode-2.11-i486-1
+groff-1.22.2-i486-1
+man-1.6g-i486-1
+man-pages-3.53-noarch-1
+nano-2.3.2-i486-1
+screen-4.0.3-i486-4
+slackpkg-2.82.0-noarch-12
+sudo-1.8.6p8-i486-1
+tmux-1.8-i486-1
+libmpc-0.8.2-i486-2
+mpfr-3.1.2-i486-1
+ncurses-5.9-i486-2
+parted-3.1-i486-1
+polkit-0.105-i486-4
+conntrack-tools-1.4.2-i486-1
+dhcpcd-6.0.5-i486-2
+gnutls-3.1.16-i486-1
+ipset-6.20-i486-1
+iptables-1.4.20-i486-1
+iputils-s20121221-i486-1
+links-2.8-i486-1
+net-tools-1.60.20120726git-i486-1
+network-scripts-14.1-noarch-2
+rsync-3.1.0-i486-1
+ulogd-2.0.2-i486-1
+wget-1.14-i486-2
+infozip-6.0-i486-2
+glibc-2.17-i486-7
+glibc-i18n-2.17-i486-7
+glibc-profile-2.17-i486-7
+kernel-generic-3.10.17-i486-3
+bc-1.06.95-i486-1
+perl-5.18.1-i486-1
+htop-1.0.2-i486-1
+kbd-1.15.3-i486-2
+lrzip-0.616-i486-1
+strace-4.8-i486-1
+kernel-source-3.10.17_smp-noarch-3
+make-3.82-i486-4
+kernel-headers-3.10.17_smp-x86-3
+gcc-4.8.2-i486-1
+binutils-2.23.52.0.1-i486-2
+automake-1.11.5-noarch-1
+autoconf-2.69-noarch-1
+pciutils-3.2.0-i486-1
+iproute2-3.10.0-i486-2
+gnupg-1.4.16-i486-1_slack14.1
+openssh-6.4p1-i486-1_slack14.1
+lsof-4.83-i486-1
+iftop-1.0pre2-i486-1
+libpcap-1.4.0-i486-1
+sysstat-9.0.6.1-i486-1
+
