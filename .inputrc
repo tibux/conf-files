@@ -1,2 +1,5 @@
+#
+# To reload :
+#   bind -f ~/.inputrc
 "\e[1;5C": forward-word  # ctrl + rigut
 "\e[1;5D": backward-word # ctrl + left
