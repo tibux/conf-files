@@ -132,3 +132,14 @@ libnl3-3.2.21-i486-1
 openvpn-2.3.2-i486-1
 lzo-2.03-i486-1
 lsscsi-0.27-i486-1
+ntp-4.2.6p5-i486-4
+
+# ramfs
+
+  cd /root
+  rm .bash_history
+  ln -sf /var/tmp/users/root/.bash_history .bash_history
+
+  cd /home/testuser
+  rm .bash_history
+  ln -s /var/tmp/users/testuser/.bash_history .bash_history
