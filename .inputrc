@@ -6,3 +6,11 @@
 "\e[1;5D": backward-word # ctrl + left
 
 "\e[3~": delete-char
+
+# "\e[5~": beginning-of-history
+# "\e[6~": end-of-history
+# "\e[7~": beginning-of-line
+# "\e[8~": end-of-line
+# # Rétablissement de "fin de ligne" en console,
+# # suite aux modifications opérées. ;)
+# "\e[4~": end-of-line
