@@ -136,6 +136,11 @@ ntp-4.2.6p5-i486-4
 
 # ramfs
 
+  install -m 755 rc.local /etc/rc.d/rc.local
+  install -m 755 /etc/rc.d/rc.syslog /root/
+
+  chmod -x /etc/rc.d/rc.syslog
+
   cd /root
   rm .bash_history
   ln -sf /var/tmp/users/root/.bash_history .bash_history
@@ -143,3 +148,11 @@ ntp-4.2.6p5-i486-4
   cd /home/testuser
   rm .bash_history
   ln -s /var/tmp/users/testuser/.bash_history .bash_history
+
+  cd /var/log
+  rm btmp cron debug dmesg faillog lastlog maillog messages secure spooler syslog wtmp 
+  for f in btmp cron debug dmesg faillog lastlog maillog messages secure spooler syslog wtmp; do
+    ln -s /var/tmp/log/${f} ${f}
+  done
+
+  # Edit /etc/rc.d/rc.M and comment out the line that pipes dmesg to /var/log/dmesg. 

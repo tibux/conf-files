@@ -1,0 +1,30 @@
+#!/bin/sh
+#
+# /etc/rc.d/rc.local:  Local system initialization script.
+#
+# Put any local startup commands in here.  Also, if you have
+# anything that needs to be run at shutdown time you can
+# make an /etc/rc.d/rc.local_shutdown script and put those
+# commands in there.
+
+# Setup the RAM disk and file system
+modprobe brd
+modprobe minix
+/usr/bin/dd if=/dev/zero of=/dev/ram0 bs=1k count=16384
+/sbin/mkfs.minix /dev/ram0 16384
+mount /dev/ram0 /var/tmp
+
+# Make directories in RAM for user bash history files
+mkdir -p /var/tmp/users/{root,gja032}
+touch /var/tmp/users/{root,gja032}/.bash_history 
+chown -R gja032:users /var/tmp/users/gja032
+
+# Makes some of the common files found in /var/log that we will have link back to here
+mkdir -p /var/tmp/log
+for f in btmp cron debug dmesg faillog lastlog maillog messages secure spooler syslog wtmp; do
+  touch /var/tmp/log/$f;
+done
+
+# Save the contents of 'dmesg':
+/bin/dmesg -s 65536 > /var/log/dmesg
+
