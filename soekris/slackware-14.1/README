@@ -144,10 +144,16 @@ ntp-4.2.6p5-i486-4
   cd /root
   rm .bash_history
   ln -sf /var/tmp/users/root/.bash_history .bash_history
-
+  ln -s /var/tmp/users/root/screen .screen
+  ln -s /var/tmp/users/root/config .config
+  ln -s /var/tmp/users/root/gnupg .gnupg
+ 
   cd /home/testuser
   rm .bash_history
   ln -s /var/tmp/users/testuser/.bash_history .bash_history
+  ln -s /var/tmp/users/testuser/screen .screen
+  ln -s /var/tmp/users/testuser/config .config
+  ln -s /var/tmp/users/testuser/gnupg .gnupg
 
   cd /var/log
   rm btmp cron debug dmesg faillog lastlog maillog messages secure spooler syslog wtmp 
