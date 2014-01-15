@@ -155,4 +155,6 @@ ntp-4.2.6p5-i486-4
     ln -s /var/tmp/log/${f} ${f}
   done
 
+  chmod -x /etc/cron.daily/logrotate
+
   # Edit /etc/rc.d/rc.M and comment out the line that pipes dmesg to /var/log/dmesg. 
