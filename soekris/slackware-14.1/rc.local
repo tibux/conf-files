@@ -19,7 +19,7 @@ mkdir -p /var/tmp/users/{root,testuser}
 touch /var/tmp/users/{root,testuser}/.bash_history
 mkdir -p /var/tmp/users/{root,testuser}/{screen,config,gnupg}
 chmod 700 /var/tmp/users/{root,testuser}/screen
-chown -R gja032:users /var/tmp/users/testuser
+chown -R testuser:users /var/tmp/users/testuser
 
 # Makes some of the common files found in /var/log that we will have link back to here
 mkdir -p /var/tmp/log
