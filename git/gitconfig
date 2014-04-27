@@ -4,3 +4,8 @@
 #	core.excludesfile = $/.gitignore.global
 [color]
 	ui = false
+#[alias] 
+#	ci = commit
+#	co = checkout
+#	st = status
+#	br = branch
