@@ -2,3 +2,5 @@
 	name = tibux
 	email = tib@tibux.org
 #	core.excludesfile = $/.gitignore.global
+[color]
+	ui = false
