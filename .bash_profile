@@ -5,6 +5,9 @@ export HISTSIZE=1000
 # Don't put duplicate lines in the history
 export HISTCONTROL=ignoredups
 
+# Fix esc in the terminal
+export LESS="-eirMX"
+
 # Docker
 alias dockercleancontainers="docker ps -a --no-trunc| grep 'Exit' | awk '{print \$1}' | xargs -L 1 -r docker rm"
 alias dockercleanimages="docker images -a --no-trunc | grep none | awk '{print \$3}' | xargs -L 1 -r docker rmi"
