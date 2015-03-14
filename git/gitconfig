@@ -1,7 +1,7 @@
 [user]
 	name = tibux
 	email = tib@tibux.org
-#	core.excludesfile = $/.gitignore.global
+	core.excludesfile = $/.gitignore.global
 [color]
 	ui = false
 #[alias] 
@@ -9,3 +9,7 @@
 #	co = checkout
 #	st = status
 #	br = branch
+
+# Fix esc in the terminal
+[core]
+	pager = less -R

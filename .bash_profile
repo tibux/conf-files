@@ -6,7 +6,7 @@ export HISTSIZE=1000
 export HISTCONTROL=ignoredups
 
 # Fix esc in the terminal
-export LESS="-eirMX"
+#export LESS="-eirMX"
 
 # Docker
 alias dockercleancontainers="docker ps -a --no-trunc| grep 'Exit' | awk '{print \$1}' | xargs -L 1 -r docker rm"
