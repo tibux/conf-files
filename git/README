@@ -1,0 +1,9 @@
+
+
+git config --global core.excludesfile ~/.gitignore_global
+
+git pull --ff-only 
+
+git config --global alias.up '!git remote update -p; git merge --ff-only @{u}'
+
+git config --global core.pager 'less -R'

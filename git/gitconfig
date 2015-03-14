@@ -4,11 +4,15 @@
 	core.excludesfile = $/.gitignore.global
 [color]
 	ui = false
-#[alias] 
+[alias]
+	up = "!git remote update -p; git merge --ff-only @{u}"
 #	ci = commit
 #	co = checkout
 #	st = status
 #	br = branch
+
+[pull]
+	ff = only
 
 # Fix esc in the terminal
 [core]
