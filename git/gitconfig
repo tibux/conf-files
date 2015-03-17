@@ -1,19 +1,19 @@
 [user]
-	name = tibux
 	email = tib@tibux.org
-	core.excludesfile = $/.gitignore.global
+	name = tibux
 [color]
-	ui = false
+	ui = true
+[push]
+	default = simple
 [alias]
 	up = "!git remote update -p; git merge --ff-only @{u}"
-#	ci = commit
-#	co = checkout
-#	st = status
-#	br = branch
-
+	# ci = commit
+	# co = checkout
+	# st = status
+	# br = branch
 [pull]
 	ff = only
-
-# Fix esc in the terminal
 [core]
+	excludesfile = $/.gitignore_global
+	# Fix esc in the terminal
 	pager = less -R
