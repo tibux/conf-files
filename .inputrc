@@ -5,12 +5,7 @@
 "\e[1;5C": forward-word  # ctrl + rigut
 "\e[1;5D": backward-word # ctrl + left
 
-"\e[3~": delete-char
+"\e[1~": beginning-of-line # Home
+"\e[3~": delete-char # Suppr
+"\e[4~": end-of-line # End
 
-# "\e[5~": beginning-of-history
-# "\e[6~": end-of-history
-# "\e[7~": beginning-of-line
-# "\e[8~": end-of-line
-# # Rétablissement de "fin de ligne" en console,
-# # suite aux modifications opérées. ;)
-# "\e[4~": end-of-line
